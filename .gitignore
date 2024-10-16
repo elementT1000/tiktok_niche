@@ -1,0 +1,15 @@
+#Ignore virtual environment folders
+niche/
+
+#Ignore environment variable files
+.env
+
+#Ignore compiled python files
+*.pyc
+__pycache__/
+
+#Ignore log files
+*.log
+
+#Ignore HAR files
+*.har 
