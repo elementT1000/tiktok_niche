@@ -1,8 +1,10 @@
 ## Business Problem
 ___
-If I had to start all over again with my career, I would have started building a social media audience from the beginning. In "Day Trading Attention," Gary Vaynerchuk explains that attention is one of the most valuable assets to modern businesses (this extends to personal brands, hence, my interest). His thesis is that one of the highest Return on Investment (ROI) ways to capture that attention is to use organic social media and to make content that people want to consume. 
+If I had to start all over again with my career, I would have started building a social media audience from the beginning. 
 
-But, as a late comer to social media, it is kind of unclear what the average person wants to watch. By extension, it may not be clear to a business what kind of content they should be creating and how to position that content if they haven't created any up to the present day.
+In "Day Trading Attention," Gary Vaynerchuk explains that attention is one of the most valuable assets to modern businesses (this extends to personal brands, hence, my interest). His thesis is that one of the highest Return on Investment (ROI) ways to capture that attention is to use organic social media and to make content that people want to consume. 
+
+But, as a late comer to social media, it is unclear what the average person wants to watch. By extension, it may not be clear to a business what kind of content they should be creating and how to position that content if they haven't created any up to the present day.
 
 Therefore, we can set up a couple of questions:
 1. How are creators in our niche currently getting their content in front of the right people organically? More specifically, what hashtags are they using to help communicate their target audience to the platform's algorithm?
