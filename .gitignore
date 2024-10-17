@@ -12,5 +12,5 @@ __pycache__/
 *.log
 
 #Ignore HAR files
-*.har 
-*.csv
+# *.har # Leaving the HAR file in for the audience of this GitHub
+# *.csv # Leaving the audience some data to play with
