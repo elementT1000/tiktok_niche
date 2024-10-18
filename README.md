@@ -14,6 +14,7 @@ Therefore, we can set up a couple of questions:
 In this project, we will focus on TikTok due to a couple of features of the platform:
 - Interest based algorithm, which allows new accounts with low followers to get a relatively high view rate IF they have content that aligns with the target audience's interests.
 - Industry leading short form video format.
+
 ### Data Source
 ___
 Data has been scraped from a search completed on TikTok's website. A semi-manual technique that is compatible with TikTok's Terms & Conditions has been used.
@@ -28,10 +29,14 @@ Briefly, this technique is as follows:
 This HAR file will be used as the initial raw data source.
 
 The search term used in this case is "Content Creator Tips." This is because of my personal interest and immediate value of the data to these interests. A data driven approach could provide a different perspective than most creators in this space, currently.
+
 ### Methods and Tech Used
 ___
-- Web development tools are used to gather data, as previously mentioned.
-- A jupyter notebook and python have been used for data cleaning, aggregation, manipulation, and visualization
+- Data was gathered using web scraping tools and stored in a structured format for analysis.
+- A Jupyter Notebook, along with Python libraries such as Pandas, was used for data cleaning, aggregation, and normalization.
+- Matplotlib, Plotly, and Seaborn were employed to create visualizations, including bar charts, pie charts, scatter plots, and correlation matrices.
+- MinMaxScaler was applied for normalizing metrics, and a custom composite engagement score was calculated by weighting various engagement metrics.
+
 ### Results
 ___
 *1. How are creators in our niche currently getting their content in front of the right people organically? More specifically, what hashtags are they using to help communicate their target audience to the platform's algorithm?*
@@ -45,9 +50,16 @@ An interesting insight can be gained from the second pie chart, 'Top Hashtags by
 
 *2. Who are the current top performers in our niche in terms of views and engagement?*
 ![alt text](assets/AllTop10Accounts.png)
-Thes Bar Charts show the Top 10 accounts in terms views and engagement metrics. From the charts, **we can identify laurennrwebb, laurenwolfe, rixirising, milajaye, tipsforcreators, lo_silver, and amymarietta as top-performing accounts**. These accounts appear on multiple charts, indicating consistent performance across different metrics and reducing the likelihood that their success is due to outliers.
+When observing the bar charts for the top 10 accounts for each metric, there is not a clear winner or set of accounts that are leaders. So, it was necessary to create a composite scoring function that incorporated normalized data from the metrics we are observing. 
 
-The 'Top 10 Accounts by Comments' bar chart does present an interesting observation. Milajaye is by far an outlier for the amount of comments that she generates. More than 5x second place. Further investigation is needed to understand why this account is performing so well. Potentially, it could be here Call to Action (CTA), her subject matter (iPhone photography generates more engagement, as we discussed), or maybe the audience cohort that she appeals to.
+![alt text](assets/Top10AccountsCompositeScore.png)
+The process of calculating the composite engagement score involves two steps: First, we aggregate the metrics (views, likes, comments, shares) for each user by calculating their average per video. 
+Then, we normalize these aggregated metrics using Minimum-Maximum scaling and calculate the composite engagement score by applying custom weights to each normalized metric (views, likes, comments, and shares), combining them into a final score for ranking.
+
+From this data, we can see that **the top performing accounts in this niche**. Further investigation of their videos are necessary to determine the differentiating factors. Variables such as their delivery of their content (tone, cadence, non-verbal communication), the hook that they use (the first 3-5 seconds of the video), and reposting networks should be considered, among other variables.
+
+![alt text](assets/CorrelationMatrix.png)
+Observing the bar charts of the top 10 accounts above, one of the charts stands out as very different; The Top 10 accounts for comments does not contain many of the top performers from the other charts. This seems to indicate that comments perform differently in the algorithm that determines virality of a video. So, a Correlation Matrix (above) was created to evaluate this. It seems that **comment count does not correlate strongly with other metrics**. Further investigation is necessary to determine if this is due to outlier videos - videos with a very high or low number of comments. Or, potentially this may be a novel observation.
 
 *3. Assuming we are starting from scratch, can we identify some creators in our niche that have low follower counts but have high views and engagement? This could inform a strategy for scaling quickly.*
 ![alt text](assets/ScatterPlotViewsVsFollowers.png)
